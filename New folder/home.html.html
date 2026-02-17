@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        /* --- Loading Screen Styles --- */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        #loader-text {
+            color: #00ff88;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* --- Main Page Styles --- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            /* Aligning content to the left as requested */
+            text-align: left;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #2c3e50; display: inline-block; }
+        
+        section { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div id="loader-text">&lt;/A&gt;</div>
+    </div>
+
+    <header>
+        <h1>Information about ME</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>A Small Intoduction</h2>
+            <p>Hello Viewers,Thank you for clicking on this site. My name is Aadvik Jindal I am a passionate Gamer & Programmer. My favorite Anime is Pokémon,Naruto,Blue Lock. Favorite Series is Stranger Things. My favorite Movies are Home Alone,Home Alone 2 Lost In New York,Stand By Me Doraemon and Stand By Me Doraemon 2.</p>
+        </section>
+
+        <section>
+            <h2>Details</h2>
+             <p> To know more about me,Here are some details :
+            <ul>
+                <li><strong>Discord:</strong> aadvikghost </li>
+                <li><strong>Instgram:</strong> aadvikonyx </li>
+                <li><strong>Email:</strong> aadviksteer@gmail.com</li>
+                <li><strong>Profession:</strong> Gamer / Programmer</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Active Time</h2>
+            <p>I am available on Monday to Friday (Day or very rarely night) and Saturday to Sunday (Evening or Nightime)</p>
+        </section>
+    </div>
+
+    <script>
+        // Logic to hide the loader after the page loads
+        window.addEventListener("load", function() {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500); // Wait for the fade out to finish
+            }, 1000); // Keeps loader visible for 1 second for effect
+        });
+    </script>
+
+</body>
+</html>
